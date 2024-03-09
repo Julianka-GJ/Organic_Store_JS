@@ -1,0 +1,140 @@
+ // color 
+
+ $color__main: #274C5B;
+ $color__main-hover-h3: #7EB693;
+ $button__arrow: #335B6B;
+ $button__yellow: #EFD372;
+ $color__content: #525C60;
+ $light__green:#EFF6F1;
+ $hover__social: #b7e7cf;
+
+ $shadow_hover: 0px 10px 5px -3px rgba(39, 76, 91, 0.75),
+                0px 15px 8px -3px rgba(155, 187, 204, 0.75),
+                0px 20px 10px -3px rgba(145, 200, 236, 0.75);
+
+$shadow_menu: 0px 5px 5px -3px rgba(48, 84, 99, 0.75),
+              0px 10px 10px -3px rgba(151, 165, 173, 0.75);
+
+  
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Regular.woff') format('woff'),
+         url('../fonts/OpenSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Yellowtail';
+    src: url('../fonts/Yellowtail-Regular.woff') format('woff'),
+         url('../fonts/Yellowtail-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff') format('woff'),
+         url('../fonts/Roboto-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: bold;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.woff') format('woff'),
+         url('../fonts/OpenSans-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: bold;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+
+@mixin title-h2 {
+    font-size: 45px;
+    color: $color__main;
+    font-weight: 600;
+    line-height: 58px;  
+}
+
+@mixin title-h3 {
+    font-size: 36px;
+    font-family: 'Yellowtail', 'OpenSans', 'Roboto';
+    font-weight: 400;
+    line-height: 64px;
+    color: $color__main-hover-h3;
+}
+
+@mixin title-h4 {
+  font-size: 30px;
+  font-family: 'Roboto', 'OpenSans';
+  font-weight: 700;
+  line-height: 42px;
+  color: $color__main;
+}
+
+@mixin text-content {
+    font-size: 18px;
+    font-family: 'OpenSans', 'Roboto';
+    line-height: 32px;
+    font-weight: 400;
+    color: $color__content;
+}
+
+@mixin title-price {
+    font-family: 'OpenSans', 'Roboto';
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: 0.36px;
+}
+
+@mixin button-main {
+    padding: 20px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: $button__yellow;
+}
+
+@mixin button-title {
+    font-size: 19px;
+    font-family: 'Roboto', 'OpenSans';
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.6px;
+}
+
+
+@mixin button-buy {
+    border-radius: 8px;
+    background-color: $button__arrow;
+    padding: 5px 20px;
+    font-size: 15px;
+    font-family: 'OpenSans', 'Roboto';
+    line-height: 27px;
+    color: #FFFFFF;
+    letter-spacing: 0.36px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}

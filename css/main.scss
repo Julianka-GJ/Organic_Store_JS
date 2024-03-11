@@ -12,7 +12,7 @@ body {
 }
 
 @import "../component/Header/header.scss";
-@import "banner";
+@import "../component/Banner/banner.scss";
 @import "slider";
 @import "../component/Products/products.scss";
 @import "../component/Rating/rating.scss";
@@ -22,7 +22,6 @@ body {
  //------------- section_about_us -----------------------
 
  
-
 .container__about {
     display: flex;
     justify-content: space-between;

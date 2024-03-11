@@ -192,28 +192,31 @@
         }
     
         .section__catalog-items {
-            gap: 20px;
+            gap: 10px;
         }
     }
 
     .item-card {
         width: 90%;
-        padding: 20px;
+        padding: 15px;
 
         .item-category {
+            width: 40%;
+
             p {
-                font-size: 17px;
+                font-size: 15px;
             }
         }
 
         .item-heading {
             button {
-                padding: 10px 30px;
-                font-size: 18px;
+                padding: 7px 20px;
+                font-size: 15px;
             }
     
             .item-title {
-                font-size: 25px;
+                font-size: 20px;
+                line-height: 24px;
             }
         }
     }

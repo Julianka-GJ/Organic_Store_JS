@@ -1,5 +1,4 @@
 const ratings = document.querySelectorAll('.rating');
-console.log(ratings)
 
 if (ratings.length > 0) {
     initRatings();

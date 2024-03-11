@@ -2,6 +2,8 @@ const navMenu = document.querySelector('.header__nav-menu');
 const navMenuMob = document.querySelector('.burger__icon');
 const burgerMenu = document.querySelector('.burger__icon-btn');
 const header = document.querySelector('.header');
+const bannerTitle = document.querySelector('.banner__content-title');
+
 
 
 class menuRenderer {
@@ -91,3 +93,7 @@ function arrowLinkMenu() {
 }
 
 arrowLinkMenu();
+
+
+
+

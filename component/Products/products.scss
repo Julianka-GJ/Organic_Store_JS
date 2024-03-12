@@ -1,5 +1,4 @@
 
-
 .section__products {
     display: flex;
     flex-direction: column;
@@ -26,9 +25,35 @@
         flex-wrap: wrap;
         gap: 30px;
     }
-
 }
 
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-8%);
+        opacity: 0.6;
+    }   
+    50% {
+        transform: translateY(2%);
+        opacity: 0.8;
+    }      
+    100% {
+        transform: translateY(0);   
+        opacity: 1;     
+    }
+ }
+  
+  .element-show {
+    animation: slide-up;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  }
+  
+  
 .item-card {
     display: flex;
     flex-direction: column;
@@ -72,9 +97,11 @@
         button {
             @include button-buy;
             transition-duration: 0.5s;
+            background: $gradient__backgraund;
+            animation: gradient 10s ease infinite;
     
             &:hover {
-                background-color: #8abd9d;
+                box-shadow: $shadow_menu;
             }
         }
 
@@ -113,6 +140,18 @@
 
     &:hover {
         box-shadow: 0 2px 18px #804f78;
+    }
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
 }
 

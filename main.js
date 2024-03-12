@@ -1,67 +1,22 @@
-const mySwiper1 = new Swiper('.swiper1', {
-  slidesPerView: 2,
-  loop: true,
-  spaceBetween: 20,
-  autoplay: {
-      delay: 2000,
-      disableOnInteraction: false
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    350: {
-      slidesPerView: 1,
-    },
-
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-  },
-});
-
-const mySwiper2 = new Swiper('.swiper2', {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: "auto",
-  loop: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false
-  },
-
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 4,
-    slideShadows: false,
-  },
-
-  keyboard: {
-    enabled: true
-  },
-
-  mousewheel: {
-    thresholdDelta: 70
-  },
-
-  breakpoints: {
-    375: {
-      slidesPerView: 2
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
     }
-  }
-});
+    else {
+      change.target.classList.remove('element-show');
+    }
+  });
+}
 
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.animate');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
 
 
 

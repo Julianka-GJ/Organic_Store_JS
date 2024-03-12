@@ -5,7 +5,6 @@ const header = document.querySelector('.header');
 const bannerTitle = document.querySelector('.banner__content-title');
 
 
-
 class menuRenderer {
   static renderDeepList(target, source) {
     if (!target || source.length === 0) {

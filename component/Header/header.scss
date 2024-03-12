@@ -320,8 +320,17 @@
 @media (max-width: 480px) {
     .header__container {
         padding: 5px 10px;
+
         .header__nav-menu {
             width: 35%;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .header__container {
+        .header__nav-menu {
+            width: 25%;
         }
     }
 }

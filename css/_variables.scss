@@ -1,21 +1,21 @@
  // color 
 
- $color__main: #274C5B;
- $color__main-hover-h3: #7EB693;
- $button__arrow: #335B6B;
- $button__yellow: #EFD372;
- $color__content: #525C60;
- $light__green:#EFF6F1;
- $hover__social: #b7e7cf;
+$color__main: #274C5B;
+$color__main-hover-h3: #7EB693;
+$button__arrow: #335B6B;
+$button__yellow: #EFD372;
+$color__content: #525C60;
+$light__green:#EFF6F1;
+$hover__social: #b7e7cf;
 
- $shadow_hover: 0px 10px 5px -3px rgba(39, 76, 91, 0.75),
-                0px 15px 8px -3px rgba(155, 187, 204, 0.75),
-                0px 20px 10px -3px rgba(145, 200, 236, 0.75);
+$shadow_hover: 0px 10px 5px -3px rgba(39, 76, 91, 0.75),
+               0px 15px 8px -3px rgba(155, 187, 204, 0.75),
+               0px 20px 10px -3px rgba(145, 200, 236, 0.75);
 
 $shadow_menu: 0px 5px 5px -3px rgba(48, 84, 99, 0.75),
               0px 10px 10px -3px rgba(151, 165, 173, 0.75);
 
-  
+$gradient__backgraund: linear-gradient(92deg, #40a36d, #51adf0);
 
 @font-face {
     font-family: 'Roboto';
@@ -113,7 +113,6 @@ $shadow_menu: 0px 5px 5px -3px rgba(48, 84, 99, 0.75),
     align-items: center;
     border: none;
     cursor: pointer;
-    background-color: $button__yellow;
 }
 
 @mixin button-title {

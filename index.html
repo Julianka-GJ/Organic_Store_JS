@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="./main.js"></script>
-    <script defer src="./component/Сonstants/data.js"></script>
     <script defer src="./component/Сonstants/menu.js"></script>
     <script defer src="./component/Header/header.js"></script>
+    <script defer src="./main.js"></script>
+    <script defer src="./component/Сonstants/data.js"></script>
     <script defer src="./component/Banner/banner.js"></script>
     <script defer src="./component/Slider/slider.js"></script>
     <script defer src="./component/Products/products.js"></script>
@@ -54,25 +54,27 @@
     <main>
         <!---------- banner ----------->
 
-        <div class="banner">
-            <div class="banner__background">
-                <img src="./img/banner.jpg" alt="banner"/>
-            </div>
+        <div class="banner__section">
             <div class="banner__content">
-                <h3>Made with nature</h3>
-                <div></div>
-
-                <h1 class="banner__content-title animate-letter">Welcome to the</h1>
-                <h1 class="banner__content-title animate-letter">world of nature</h1>
-                <h1 class="banner__content-title animate-letter">and organic.</h1>
-                <button class="button" type="button">
-                    <p>Explore Now</p>
-                    <div class="button__arrow">
-                        <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.0384 6.50003H1M9.07688 1L16 6.50003L9.07688 12V1Z" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                <div class="banner__content-container">
+                    <h3>Made with nature</h3>
+                    <h1 class="banner__content-title animate-letter">Welcome to the</h1>
+                    <h1 class="banner__content-title animate-letter">world of nature</h1>
+                    <h1 class="banner__content-title animate-letter">and organic.</h1>
+                    <div class="banner__button">
+                        <a class="banner__ref">
+                            <p>Explore Now</p>
+                            <div class="button__arrow">
+                                <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0384 6.50003H1M9.07688 1L16 6.50003L9.07688 12V1Z" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
                     </div>
-                </button>
+                </div>
+            </div>
+            <div class="banner__img">
+                <img src="./img/banner_top.jpg" alt="banner">
             </div>
         </div>
 
@@ -244,19 +246,19 @@
                     <div class="reviews__line"></div>
                 </div>
                 <div class="reviews__success">
-                    <div class="success-item">
+                    <div class="success-item animate">
                         <h4>100%</h4>
                         <p>Organic Product</p>
                     </div>
-                    <div class="success-item">
+                    <div class="success-item animate">
                         <h4>285</h4>
                         <p>Active Product</p>
                     </div>
-                    <div class="success-item">
+                    <div class="success-item animate">
                         <h4>385+</h4>
                         <p>Organic Orchads</p>
                     </div>
-                    <div class="success-item">
+                    <div class="success-item animate">
                         <h4>25+</h4>
                         <p>Years of Farming</p>
                     </div>
@@ -266,6 +268,7 @@
 
 
         <!-- Swiper2 -->
+
         <div class="swiper2">
             <div class="swiper-wrapper">
                 <div class="swiper-slide my-slide">

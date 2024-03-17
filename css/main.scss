@@ -2,7 +2,6 @@
 
 
 body {
-    max-width: 1440px;
     margin: 0 auto;
     font-family: 'Roboto', 'OpenSans';
 }
@@ -21,7 +20,6 @@ body {
 
  //------------- section_about_us -----------------------
 
- 
 .container__about {
     display: flex;
     justify-content: space-between;
@@ -53,7 +51,7 @@ body {
                 background-image: $gradient__backgraund;
                 background-clip: text;
                 color: transparent;
-                animation: gradient 10s infinite linear;
+                animation: gradient 3s infinite linear;
             }
         }
 
@@ -117,6 +115,7 @@ body {
     }
 }
 
+
 .section__about-button {
     @include button-main;
     transition-duration: .7s;
@@ -146,16 +145,39 @@ body {
         background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
         border-radius: 16px;
         transition: all 0.3s ease;
-      }
+    }
       
-      &:hover:after {
+    &:hover:after {
         top: 0;
         height: 100%;
-      }
+    }
 
-      &:active {
+    &:active {
         top: 2px;
-      }    
+    }    
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(-2%);
+        opacity: 0.1;
+    }  
+    30% {
+        transform: translateY(-8%);
+        opacity: 0.4;
+    }   
+    50% {
+        transform: translateY(2%);
+        opacity: 0.8;
+    }      
+    100% {
+        transform: translateY(0);   
+        opacity: 1;     
+    }
 }
 
 
@@ -236,7 +258,7 @@ body {
 .reviews__success {
     display: flex;
     justify-content: space-between;
-    width: 76.6%;
+    width: 60%;
     padding-bottom: 150px;
 
     .success-item {
@@ -251,6 +273,14 @@ body {
         outline: 5px solid #FFFFFF;
         outline-offset: -11px;
         background-color: #F1F1F1;
+        opacity: 0;
+
+        &.element-show {
+            animation: slide-down;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            opacity: 1;
+        }
 
         h4 {
             @include title-h4;
@@ -264,8 +294,17 @@ body {
     }
 }
 
+
+@media (max-width: 1440px) {
+    .reviews__success {
+        width: 73%;
+    }
+}
+
 @media (max-width: 1300px) {
     .reviews__success {
+        width: 75%;
+
         .success-item {
             width: 220px;
             height: 220px;
@@ -532,7 +571,7 @@ body {
             .success-item {
                 align-items: center;
                 justify-content: center;
-                width: 70%;
+                width: 80%;
                 height: auto;
                 border-radius: 45px;
                 border: 2px solid #7EB693;
@@ -628,6 +667,7 @@ body {
             padding-bottom: 50px;
 
             .success-item {
+                width: 90%;
                 padding: 5px;
             }
         }

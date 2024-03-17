@@ -1,23 +1,37 @@
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-     change.target.classList.add('element-show');
+
+const scrollItems = document.querySelectorAll('.animate');
+
+const scrollAnimation = () => {
+  let windowCentr = (window.innerHeight) + window.scrollY;
+  scrollItems.forEach(el => {
+    let scrollOffset = el.offsetTop + el.offsetHeight;
+   
+    if(windowCentr >= scrollOffset) {
+      el.classList.add('element-show');
     }
     else {
-      change.target.classList.remove('element-show');
+      el.classList.remove('element-show');
     }
-  });
-}
+  })
+};
 
-let options = {
-  threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.animate');
-
-for (let elm of elements) {
-  observer.observe(elm);
-}
+window.addEventListener('scroll', () => {
+  scrollAnimation()
+});
 
 
+
+// let timerAnim = setInterval(animatItem, 500);
+// let indexItem = 0;
+
+//   function animatItem() {
+//     let indexItem = 0;
+//     const itemAnamation = document.querySelectorAll('.success-item');
+//     const elemArray = document.querySelectorAll('.success-item')[indexItem];
+//     elemArray.classList.add('show');
+//     indexItem++;
+//     indexItem === itemAnamation.length && clearInterval(timerAnim);
+//   }
+  
 
 

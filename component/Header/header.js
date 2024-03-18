@@ -79,6 +79,7 @@ function getClassActive(event) {
     linkArr.forEach(link => {
       link.addEventListener(event, function () {
         link.classList.toggle('active');
+        event.stopPropagation();
       })
     })
   }

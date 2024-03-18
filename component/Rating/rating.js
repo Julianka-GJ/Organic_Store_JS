@@ -40,8 +40,7 @@ function initRatings() {
                 setActiveRating(ratingItem.value);
             })
 
-            ratingItem.addEventListener('mouseleave', function (e) {
-                setActiveRating();
+            ratingItem.addEventListener('click', function (e) {
                 ratingValue.innerHTML = index + 1;
                 setActiveRating()
             })

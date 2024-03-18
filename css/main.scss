@@ -255,6 +255,7 @@ body {
             animation: slide-down;
             animation-duration: 5s;
             animation-timing-function: linear;
+            opacity: 1;
         }
 
         h4 {
@@ -506,6 +507,18 @@ body {
             .success-item {
                 width: 140px;
                 height: 140px;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                height: auto;
+                border-radius: 45px;
+                border: 2px solid #7EB693;
+                outline: 3px solid #FFFFFF;
+                outline-offset: -5px;
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: $light__green;
+                width: 90%;
     
                 h4 {
                     font-size: 28px;
@@ -515,6 +528,10 @@ body {
                 p {
                     font-size: 13px;
                 }
+            }
+
+            .success-item:last-of-type {
+                margin-bottom: 0;
             }
         }
     }
@@ -599,8 +616,6 @@ body {
             align-items: center;
 
             .success-item {
-                width: 90%;
-    
                 h4 {
                     font-size: 24px;
                     line-height: 24px;
@@ -696,7 +711,6 @@ body {
             padding-bottom: 50px;
 
             .success-item {
-                width: 90%;
                 padding: 5px;
             }
         }

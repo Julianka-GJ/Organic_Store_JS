@@ -2183,7 +2183,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 60%;
+  width: 70%;
   padding-bottom: 150px;
 }
 
@@ -2237,6 +2237,10 @@ a {
   line-height: 32px;
   font-weight: 400;
   color: #525C60;
+}
+
+.reviews__success .success-item:last-of-type {
+  margin-right: 0;
 }
 
 .success-item.element-show:nth-child(2) {
@@ -2335,7 +2339,7 @@ a {
 
 @media (max-width: 1440px) {
   .reviews__success {
-    width: 73%;
+    width: 75%;
   }
 }
 
